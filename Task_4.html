@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function countDown(start) {
+
+            try {
+                if (start > 10000) {
+                throw new RangeError('Start Number is too Large.');
+            }
+
+            } catch (error){
+                console.log(`${error.name} handled Successfully!`);
+            }            
+        }
+
+        countDown(13000);
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function processData(data) {
+            try {
+            if (typeof data === 'undefined') {
+                throw new ReferenceError();
+
+            } else if (Array.isArray(data) == false) {
+                throw new TypeError();
+
+            } else if (data == ''){
+                throw new RangeError();
+            }
+            
+
+            console.log(data);
+
+        } catch(error) {
+            console.log(`Error: `, error);
+        } finally {
+            console.log('Operation Complete');
+        }
+        }
+
+   
+        processData();
+        processData('');
+        processData([]);
+        
+
+    
+
+    </script>
+</body>
+
+</html>
